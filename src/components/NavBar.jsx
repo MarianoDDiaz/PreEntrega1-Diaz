@@ -15,7 +15,7 @@ import CarWidget from "./CarWidget";
 const NavBar = () => {
   return (
     <Flex>
-      <Box p="3" bg="red.400">
+      <Box >
         Bernabeu
       </Box>
       <Spacer />

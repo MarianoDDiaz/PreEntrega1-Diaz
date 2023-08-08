@@ -1,25 +1,134 @@
-.css-k008qs {
-  background-color: #90c290;
-  align-items: center;
-  padding: 3px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.body {
+  background-color: #2b2d42;
+}
+
+.encabezado {
+  background-color: #8d99ae;
+  border: 2px solid #2b2d42;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.Botones {
+  margin: 10px;
+}
+
 .css-xl71ch {
+  font-family: "Poppins", sans-serif;
   color: #688b58;
 }
 
 .css-k008qs {
-  color: #ff8552;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+  color: #d80032;
+}
 
+.css-0 {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  padding: 10px;
+  color: #edf2f4;
 }
-.css-0{
-    padding: 3px;
-    color: black;
-    font-weight: bold;
+
+.card-container {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+  border: ridge 2px #edf2f4;
+  border-radius: 5px;
+  margin: 4px;
 }
-.css-187ia04{
-color: black;
-text-decoration: double;
-font-family: Verdana, Geneva, Tahoma, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-font-weight: bold;
-font-size: 10px;
+
+.card-container h2 {
+  font-size: 20px;
+  font-weight: normal;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.imagenLogo {
+  position: absolute;
+  left: 110px;
+  top: 11px;
+}
+
+.css-1idwstw {
+  text-align: center;
+  background-color: #2b2d42;
+  word-wrap: inherit;
+}
+
+.css-k008qs {
+  justify-content: space-around;
+}
+
+.chakra-text {
+  color: #edf2f4;
+}
+
+.chakra-heading {
+  font-family: "Poppins", sans-serif;
+  color: #d80032;
+}
+
+.chakra-card__footer {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  color: #2b2d42;
+  background-color: #8d99ae;
+  border: solid 2px #2b2d42;
+}
+
+.Footer {
+  display: flex;
+  align-items: center;
+  border: 2px solid #8d99ae;
+  border-radius: 3px;
+}
+
+.imagenCard {
+  border: 1px solid #d80032;
+  border-radius: 5px;
+}
+
+.tituloPortada {
+  margin: 0px;
+  padding: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  color: #2b2d42;
+  position: relative;
+  left: 490px;
+}
+
+.imagenPortada {
+  width: 100%;
+  height: 100%;
+}
+
+.portada {
+  background-color: #8d99ae;
+  border-radius: 5px;
+}
+
+.css-1idwstw {
+  color: #688b58;
+  border: 2px solid #8d99ae;
+}
+
+.css-1idwstw img {
+  padding: 3px;
+
+  width: 300px;
 }

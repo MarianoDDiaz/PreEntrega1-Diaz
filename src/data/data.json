@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "titulo": "Bota (negro)",
+    "imagen": "https://acdn.mitiendanube.com/stores/598/845/products/b5-negro_011-cbfc36e18d75f53a5c15290128448642-1024-1024.webp",
+    "descripcion": "Bota tipo chelsea de doble elástico confeccionada en cuero vacuno de suave textura.",
+    "precio": 35000,
+    "categoria": "Botas",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "titulo": "Zapato (marron)",
+    "imagen": "../src/assets/zapato1.webp",
+    "descripcion": "Zapato de cuero vacuno con brillo. La suela es de cuero, trabajada artesanalmente. Posee media plantilla de cuero.",
+    "stock": 10,
+    "precio": 30000,
+    "categoria": "zapatos"
+  },
+  {
+    "id": 3,
+    "titulo": "Zapato (negro)",
+    "imagen": "../src/assets/zapato2.webp",
+    "descripcion": "Zapato tipo oxford confeccionado en cuero vacuno semi brillo. El cuero tiene un proceso de pulido que le da una textura y un brillo únicos.",
+    "stock": 15,
+    "precio": 35000,
+    "categoria": "zapatos"
+  },
+  {
+    "id": 4,
+    "titulo": "Bota (marron)",
+    "imagen": "../src/assets/bota2.webp",
+    "descripcion": "Bota tipo chelsea de doble elástico confeccionada en cuero vacuno de suave textura. ",
+    "stock": 6,
+    "precio": 32000,
+    "categoria": "Botas"
+  },
+  {
+    "id": 5,
+    "titulo": "Borcego (negro)",
+    "imagen": "../src/assets/borcego1.webp",
+    "descripcion": "Borcego acordonado de cuero vacuno con tratamiento rústico. Posee cierre interior para un mejor acceso.",
+    "stock": 8,
+    "precio": 40000,
+    "categoria": "borcegos"
+  },
+  {
+    "id": 6,
+    "titulo": "Borcego (marron)",
+    "imagen": "../src/assets/borcego2.webp",
+    "descripcion": "Borcego de horma en punta confeccionada en cuero vacuno con suela de goma ruta. El acceso es mediante cordones.",
+    "stock": 10,
+    "precio": 45000,
+    "categoria": "borcegos"
+  },
+  {
+    "id": 7,
+    "titulo": "Borcego (negro)",
+    "imagen": "../src/assets/borcego3.webp",
+    "descripcion": "Borcego de horma en punta confeccionada en cuero vacuno con suela de goma ruta. El acceso es mediante cordones.",
+    "stock": 10,
+    "precio": 55000,
+    "categoria": "borcegos"
+  },
+  {
+    "id": 8,
+    "titulo": "Bota (negro)",
+    "imagen": "../src/assets/bota3.webp",
+    "descripcion": "Bota acordonada confeccionada en cuero vacuno con tratamiendo de brush off que le da un efecto bi-tonal.",
+    "stock": 10,
+    "precio": 50000,
+    "categoria": "Botas"
+  },
+  {
+    "id": 9,
+    "titulo": "Zapato (marron)",
+    "imagen": "../src/assets/zapato3.webp",
+    "descripcion": "Zapato de cuero vacuno con brillo. La suela es de cuero, trabajada artesanalmente. Posee media plantilla de cuero.",
+    "stock": 14,
+    "precio": 35000,
+    "categoria": "zapatos"
+  }
+]

@@ -1,40 +1,42 @@
-import { Center, Card, CardHeader, CardBody, CardFooter, Heading, Text, Button } from "@chakra-ui/react";
-import React from "react";
-import { useParams } from "react-router-dom"
-import ItemCount from "./ItemCount";
+import { useContext, useState } from "react";
+import ItemCount from "./ItemCount"
+import { CartContext } from "../Context/ShoppingCartContext"
 
-const ItemDetail = ({ productos }) => {
-  const { id } = useParams();
 
-  const filtroProducts = productos.filter((producto) => producto.id == id)
+const ItemDetail = ({ item }) => {
+
+  const { carrito, agregarAlCarrito } = useContext(CartContext);
+  console.log(carrito);
+
+  const [cantidad, setCantidad] = useState(1);
+
+  const handleRestar = () => {
+    cantidad > 1 && setCantidad(cantidad - 1)
+  }
+
+  const handleSumar = () => {
+    cantidad < item.stock && setCantidad(cantidad + 1)
+  }
 
   return (
-    <div>
-      {filtroProducts.map((p) => {
-        return (
-          <div key={p.id}>
-            <Center p='1rem'>
-              <Card>
-                <CardHeader>
-                  <Heading size='md'>{p.nombre}</Heading>
-                </CardHeader>
-                <CardBody>
-                  <img src={p.image} alt="" />
-                  <text>{p.description}</text>
-
-                </CardBody>
-                <CardFooter>
-                  <ItemCount />
-
-                </CardFooter>
-              </Card>
-            </Center>
-          </div>
-        );
-      })}
+    <div className="container">
+      <div className="producto-detalle">
+        <img src={item.imagen} alt={item.titulo} />
+        <div>
+          <h3 className="titulo">{item.titulo}</h3>
+          <p className="descripcion">{item.descripcion}</p>
+          <p className="categoria">Categoría: {(item.categoria)}</p>
+          <p className="precio">${item.precio}</p>
+          <ItemCount
+            cantidad={cantidad}
+            handleSumar={handleSumar}
+            handleRestar={handleRestar}
+            handleAgregar={() => { agregarAlCarrito(item, cantidad) }}
+          />
+        </div>
+      </div>
     </div>
   )
 }
-  ;
 
-export default ItemDetail;
+export default ItemDetail

@@ -1,36 +1,40 @@
-import React from "react";
-import NavBar from "./components/NavBar";
-import ItemListContainer from "./components/ItemListContainer";
-import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import Cart from './components/Cart';
+import ItemListContainer from "./components/ItemListContainer";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import "./index.css"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { CartProvider } from "./Context/ShoppingCartContext";
+import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 
 
-const App = () => {
+
+function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
+    <div>
+      <CartProvider>
+        <BrowserRouter>
 
+          <Navbar />
 
-      <Routes>
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
+            <Route path="/productos" element={<ItemListContainer />} />
+            <Route path="/productos/:categoria" element={<ItemListContainer />} />
+            <Route path="/nosotros" element={<About />} />
+            <Route path="/contacto" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />}/>
 
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/About" element={<About />} />
-        <Route exact path="/Contact" element={<Contact />} />
-        <Route exact path="/Cart" element={<Cart />} />
-        <Route exact path="/productos" element={<ItemListContainer />} />
-        <Route exact path="/categoria/:categoria" element={<ItemListContainer />} />
-        <Route exact path="/item/:id" element={<ItemDetailContainer />} />
+          </Routes>
 
-      </Routes>
-
-      <Footer />
-    </BrowserRouter>
+        </BrowserRouter>
+      </CartProvider>
+    </div>
   );
-};
+}
 
 export default App;

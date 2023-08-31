@@ -1,25 +1,18 @@
 import React from 'react'
-import { useState } from 'react'
-import { Button, ButtonGroup } from '@chakra-ui/react'
 
-const ItemCount = () => {
+const ItemCount = ({ cantidad, handleRestar, handleSumar, handleAgregar }) => {
 
-    const [contador, setContador] = useState(0)
+  return (
+    <div>
 
-    const sumar = () => {
-        setContador(contador + 1)
-    }
-    const restar = () => {
-        setContador(contador - 1)
-    }
-    return (
-        <div>
-            <p>{contador}</p>
-            <Button onClick={sumar} colorScheme='teal' size='md'>+</Button><Button onClick={restar} colorScheme='teal' size='md'>-</Button>
-
-        </div>
-
-    )
+      <div className="item-count">
+        <button onClick={handleRestar}>-</button>
+        <p>{cantidad}</p>
+        <button onClick={handleSumar}>+</button>
+      </div>
+      <button className="agregar-al-carrito" onClick={handleAgregar}>Agregar al carrito</button>
+    </div>
+  )
 }
 
 export default ItemCount

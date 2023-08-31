@@ -1,24 +1,18 @@
-import React from "react";
 import Item from "./Item";
 
-const ItemList = ({ productos }) => {
-  return (
-    <>
-      {productos.map((p) => {
-        return (
-          <Item
-            key={p.id}
-            id={p.id}
-            image={p.image}
-            nombre={p.nombre}
-            description={p.description}
-            stock={p.stock}
-            precio={p.precio}
-          />
-        );
-      })}
-    </>
-  );
-};
 
-export default ItemList;
+
+const ItemList = ({ productos, titulo }) => {
+
+  return (
+    <div className="container">
+      <h2 className="main-title"></h2>
+
+      <div className="productos">
+        {productos.map((prod) => <Item producto={prod} key={prod.id} />)}
+      </div>
+    </div>
+  )
+}
+
+export default ItemList

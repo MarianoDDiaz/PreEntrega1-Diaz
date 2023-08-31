@@ -1,21 +1,19 @@
-import { StarIcon } from "@chakra-ui/icons";
-import { Box, Flex, Button } from "@chakra-ui/react";
-import React from "react";
-import cart from "../assets/cart.png";
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../Context/ShoppingCartContext';
 
-const CarWidget = () => {
+const CartWidget = () => {
+
+  const { cantidadEnCarrito } = useContext(CartContext);
+
   return (
-    <Flex>
-      <Box>
-        <button>
-          <img src={cart} alt="imagen de carrito" width="30px" height="30px" />
-        </button>
-      </Box>
-      <Box>
-        <p>3</p>
-      </Box>
-    </Flex>
-  );
-};
+    <div>
+      <Link className="menu-link" to="/cart">
+        Carrito
+        <span className="numerito">{cantidadEnCarrito()}</span>
+      </Link>
+    </div>
+  )
+}
 
-export default CarWidget;
+export default CartWidget

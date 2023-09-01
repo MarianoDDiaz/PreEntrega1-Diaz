@@ -18,8 +18,8 @@ const About = () => {
 
   return (
     <div className="container">
-        <h1 className="main-title">Nosotros</h1>
-        <p>Componente "Nosotros"</p>
+      <h1 className="main-title">Nosotros</h1>
+      <p>Componente "Nosotros"</p>
     </div>
   )
 }
